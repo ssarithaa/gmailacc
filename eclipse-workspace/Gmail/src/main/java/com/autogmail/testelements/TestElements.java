@@ -8,7 +8,7 @@ public class TestElements {
 	public String lnamefield = "//input[@id='LastName']";
 	public String lnamevalue = "Pil";
 	public String emailidfield = "//input[@id='GmailAddress']";
-	public String emailidvalue = "saritha.pattathil";
+	public String emailidvalue = "sarit.pahil";
 	public String pwdfield = "//input[@id='Passwd']";
 	public String pwdvalue = "Saritha123";
 	public String pwdvalue2 = "Saritha123";
@@ -24,7 +24,7 @@ public class TestElements {
 	public String Genderfield = "//div[@id=':d']";
 	public String Gendervalue = "//div[@id=':e']";
 	public String Phonenofield = "//input[@id='RecoveryPhoneNumber']";
-	public String Phonenovalue = "8147524882";
+	public String Phonenovalue = "814524882";
 	public String RecoEmailfield = "//input[@id='RecoveryEmailAddress']";
 	public String RecoEmailvalue = "sarisun@gmail.com";
 	public String emailErrTxt = "//div[@id='username-errormsg-and-suggestions']";

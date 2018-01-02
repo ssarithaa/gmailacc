@@ -10,7 +10,7 @@ public class CreateAcc extends CheckingErrors {
 	}
 
 	public void testflow() throws Exception {
-		//CheckingErrors objerr = new CheckingErrors();
+		// CheckingErrors objerr = new CheckingErrors();
 		TestElements tdataobj = new TestElements();
 		super.setbrowser(tdataobj.brwser);
 		this.getDriver().get(tdataobj.baseurl);
