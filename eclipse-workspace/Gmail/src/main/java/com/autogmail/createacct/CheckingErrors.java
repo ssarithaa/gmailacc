@@ -1,6 +1,5 @@
 package com.autogmail.createacct;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.autogmail.base.Base;
@@ -35,12 +34,8 @@ public class CheckingErrors extends Base {
 	 */
 	public boolean isError(String errTxt, String fieldXPath) throws InvalidConfigException {
 		String errMessage = super.getTxt(fieldXPath);
+		return this.isTextPresent(errMessage, errTxt) ? true : false;
 
-		if ((errMessage != null) && errMessage.contains(errTxt)) {
-			return true;
-		}
-
-		return false;
 	}
 
 	/**
@@ -51,18 +46,19 @@ public class CheckingErrors extends Base {
 	 * @return
 	 * @throws InvalidConfigException
 	 */
-	public boolean checkPwdErr(String pwderrtxt, String cnfpwderrtxt) throws InvalidConfigException {
-		WebElement we = super.getDriver().findElement(By.xpath(pwderrtxt));
-		WebElement we2 = super.getDriver().findElement(By.xpath(cnfpwderrtxt));
-
-		String msg = we.getText(); // error when password doesn't meet criteria
-		String msg2 = we2.getText(); // error when confirmation password mismatches
-		if (((msg != null) && (msg.contains("Try"))) || msg2.contains("Try")) {
-			return false;
-		} else {
-			return true;
-		}
-	}
+	// public boolean checkPwdErr(String pwderrtxt, String cnfpwderrtxt) throws
+	// InvalidConfigException {
+	// WebElement we = super.getDriver().findElement(By.xpath(pwderrtxt));
+	// WebElement we2 = super.getDriver().findElement(By.xpath(cnfpwderrtxt));
+	//
+	// String msg = we.getText(); // error when password doesn't meet criteria
+	// String msg2 = we2.getText(); // error when confirmation password mismatches
+	// if (((msg != null) && (msg.contains("Try"))) || msg2.contains("Try")) {
+	// return false;
+	// } else {
+	// return true;
+	// }
+	// }
 
 	/**
 	 * Check for password errors
@@ -73,12 +69,11 @@ public class CheckingErrors extends Base {
 	 * @throws InvalidConfigException
 	 */
 	public boolean isPasswordValid(String xpathPwdErrtxt, String xpathCnfPwdErrTxt) {
+
 		String msg = super.getTxt(xpathPwdErrtxt); // error when password doesn't meet criteria
 		String msg2 = super.getTxt(xpathCnfPwdErrTxt); // error when confirmation password mismatches
 
-		if (((msg != null) && (msg.contains("Try"))) || msg2.contains("Try")) {
-			return false;
-		}
-		return true;
+		return (this.isTextPresent(msg, "Try") || this.isTextPresent(msg2, "Try")) ? false : true;
+
 	}
 }

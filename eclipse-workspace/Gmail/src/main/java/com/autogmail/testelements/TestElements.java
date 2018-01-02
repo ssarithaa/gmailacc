@@ -8,12 +8,12 @@ public class TestElements {
 	public String lnamefield = "//input[@id='LastName']";
 	public String lnamevalue = "Pil";
 	public String emailidfield = "//input[@id='GmailAddress']";
-	public String emailidvalue = "sarit.pahil";
+	public String emailidvalue = "ssathaa";
 	public String pwdfield = "//input[@id='Passwd']";
-	public String pwdvalue = "Saritha123";
+	public String pwdvalue = "Sa3";
 	public String pwdvalue2 = "Saritha123";
 	public String cnfpwdfield = "//input[@id='PasswdAgain']";
-	public String cnfpwdvalue = "Saritha12";
+	public String cnfpwdvalue = "Saritha123";
 	public String cnfpwdvalue2 = "Saritha123";
 	public String Monthfield = "//div[@id=':0']";
 	public String Monthvalue = "//div[@class='goog-menuitem-content' and contains(text(),'April')]";
@@ -24,7 +24,7 @@ public class TestElements {
 	public String Genderfield = "//div[@id=':d']";
 	public String Gendervalue = "//div[@id=':e']";
 	public String Phonenofield = "//input[@id='RecoveryPhoneNumber']";
-	public String Phonenovalue = "814524882";
+	public String Phonenovalue = "9999999999";
 	public String RecoEmailfield = "//input[@id='RecoveryEmailAddress']";
 	public String RecoEmailvalue = "sarisun@gmail.com";
 	public String emailErrTxt = "//div[@id='username-errormsg-and-suggestions']";

@@ -74,4 +74,11 @@ public class Base {
 		}
 		return null;
 	}
+
+	public boolean isTextPresent(String Maintxt, String txtToCheck) {
+
+		return (Maintxt != null) && Maintxt.contains(txtToCheck) ? true : false;
+
+	}
+
 }

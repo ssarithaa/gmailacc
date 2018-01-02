@@ -39,7 +39,7 @@ public class CreateAcc extends CheckingErrors {
 
 		}
 		// alternate flow when password errors occur
-		boolean pwdok = super.checkPwdErr(tdataobj.pwderrtxt, tdataobj.cnfpwderrtxt);
+		boolean pwdok = super.isPasswordValid(tdataobj.pwderrtxt, tdataobj.cnfpwderrtxt);
 
 		if (!pwdok) {
 			this.getDriver().findElement(By.xpath(tdataobj.pwdfield)).clear();
